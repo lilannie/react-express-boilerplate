@@ -1,5 +1,5 @@
 ### Usage
 
-npm install
-npm run build
+npm install \n
+npm run build \n
 npm run server
