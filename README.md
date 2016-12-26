@@ -1,5 +1,5 @@
 ### Usage
 
-npm install
-npm run build
-npm run server
+1. npm install
+2. npm run build
+3. npm run server
