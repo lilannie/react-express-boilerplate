@@ -1,39 +1,64 @@
 {
-  "name": "boilerplate",
+  "name": "Boilerplate",
   "version": "1.0.0",
-  "description": "Simple react app",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js",
-    "build:hot": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js -w",
-    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.js --hot --inline",
-    "server": "node ./server/server.js"
-  },
+  "description": "Simple React App",
   "author": "Annie Steenson",
   "license": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js",
+    "build:hot": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js -w",
+    "server": "node ./server/server.js",
+    "server:dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.js --hot --inline",
+    "test": "npm run lint && jest"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test/index.js",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./coverage/",
+      "./public/",
+      "./test/index.js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
+  },
   "dependencies": {
-    "express": "^4.13.4",
-    "jquery": "^3.1.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.3.2"
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.1",
+    "redux-act-async": "^1.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "@sketchpixy/rubix": "^2.0.0",
-    "babel-core": "^6.5.1",
-    "babel-loader": "^6.2.2",
-    "babel-plugin-syntax-class-properties": "^6.13.0",
-    "babel-plugin-transform-class-properties": "^6.19.0",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-preset-react": "^6.5.0",
-    "css-loader": "^0.26.1",
-    "node-sass": "^4.2.0",
-    "react-addons-update": "^15.4.2",
-    "react-hot-loader": "^1.3.1",
-    "react-router": "^3.0.0",
-    "sass-loader": "^4.1.1",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.16.2"
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.1.1",
+    "jest": "^20.0.4",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
+    "react-addons-test-utils": "^15.6.0",
+    "react-intl": "^2.3.0",
+    "sass-loader": "^6.0.6",
+    "sinon": "^2.3.5",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
   }
 }
