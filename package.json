@@ -6,10 +6,11 @@
   "license": "",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js",
-    "build:hot": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js -w",
-    "server": "node ./server/server.js",
-    "server:dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.js --hot --inline",
+    "start": "nodemon ./server/app.js",
+    "build": "webpack --config ./webpack/webpack.config.js",
+    "build:hot": "webpack --config ./webpack/webpack.config.js -w",
+    "server": "node ./server/app.js",
+    "server:dev": "webpack-dev-server --config ./webpack/webpack.config.js --hot --inline",
     "test": "npm run lint && jest"
   },
   "jest": {
@@ -29,9 +30,12 @@
     ]
   },
   "dependencies": {
-    "ejs": "^2.5.6",
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
     "express": "^4.15.3",
     "extract-text-webpack-plugin": "^2.1.2",
+    "mongoose": "^4.11.6",
+    "nodemon": "^1.11.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
