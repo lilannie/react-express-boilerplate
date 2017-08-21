@@ -2,21 +2,7 @@ const path = require('path'),
     express = require('express'),
     app = express(),
     apiRouter = require('./api-router')(express.Router()),
-    mongoose = require('mongoose'),
-	  bodyParser = require('body-parser'),
-
-    mongodbURL = '';
-
-mongoose.Promise = require('bluebird');
-mongoose.connect(mongodbURL)
-  .then(() => {
-    console.log('Successfully connected to MongoDB');
-  })
-	.catch(error => {
-		console.log('Error connecting to MongoDB');
-		console.log(error);
-		process.exit(1);
-	});
+	  bodyParser = require('body-parser');
 
 app.use(express.static('../public'));
 app.set('view engine', 'ejs');

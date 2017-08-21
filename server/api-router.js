@@ -4,6 +4,5 @@ module.exports = apiRouter => {
 		res.render('api');
 	});
 
-
 	return apiRouter;
 };
