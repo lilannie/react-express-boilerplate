@@ -4,8 +4,8 @@ const path = require('path'),
     apiRouter = require('./api-router')(express.Router()),
 	  bodyParser = require('body-parser');
 
-app.use(express.static('../public'));
-app.set('view engine', 'ejs');
+app.use(express.static(path.resolve('public')));
+app.set('view engine', 'html');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use('/api', apiRouter);
 
 app.get('*', (req, res) => {
-   res.render('index');
+   res.sendFile(path.resolve('public', 'index.html'));
 });
 
 app.listen(3000, function () {

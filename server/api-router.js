@@ -1,7 +1,7 @@
 module.exports = apiRouter => {
 
 	apiRouter.route('/').get((req, res) => {
-		res.render('api');
+		res.render('index.html');
 	});
 
 	return apiRouter;

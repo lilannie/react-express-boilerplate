@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js -w",
-    "server": "node ./server/server.js"
+    "server": "nodemon ./server/app.js"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/index.js",
@@ -27,10 +27,9 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
-    "ejs": "^2.5.7",
     "express": "^4.15.3",
     "react": "^15.4.2",
-    "react-dom": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

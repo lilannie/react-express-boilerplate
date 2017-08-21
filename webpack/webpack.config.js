@@ -2,19 +2,19 @@ const path = require('path'),
 	webpack = require('webpack'),
 	//HTMLWebpackPlugin = require('html-webpack-plugin'), // Useful when bundles file names change dynamically
 	paths = {
-	    entry: path.join([__dirname, '..', 'client', 'index.js']),
-	    build: path.join([__dirname, '..', 'public']),
-	    output: path.join([__dirname, '..', 'public', 'bundle.js'])
+	    entry: path.resolve('client', 'index.js'),
+	    build: path.resolve('public'),
+	    output: 'bundle.js',
 	};
 
 module.exports = {
 	devtool: 'eval-source-map', // Faster rebuild, dev env only
   entry: [
-  	'webpack-hot-middleware/client?reload=true',
+  	// 'webpack-hot-middleware/client?reload=true', - have to add hot middleware to express server
 	  paths.entry
   ],
   output: {
-    path: __dirname,
+    path:paths.build,
     filename: paths.output,
   },
   resolve: {
@@ -34,10 +34,6 @@ module.exports = {
 	    {
 	    	test: /\.json?$/,
 		    loader: 'json-loader'
-	    },
-	    {
-	    	test: /\.css$/,
-		    loader: ['style-loader', 'css-loader']
 	    },
       {
         test: /\.scss$/,
