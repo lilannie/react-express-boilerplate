@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Signup extends React.Component {
-    render() {
-        return (
-            <div className="">
-            </div>
-        );
-    }
+export default class Signup extends Component {
+	render() {
+		return (
+			<div className="signup">
+				Signup!
+			</div>
+		);
+	}
 };
 

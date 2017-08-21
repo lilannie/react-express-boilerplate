@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class UnderConstruction extends React.Component {
-    render() {
-        return (
-            <div className="">
-
-            </div>
-        );
-    }
+export default class UnderConstruction extends Component {
+  render() {
+    return (
+      <div className=""></div>
+    );
+  }
 }

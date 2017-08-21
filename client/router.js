@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Route, Router, IndexRoute, browserHistory} from 'react-router';
+import {BrowserRouter} from 'react-router-dom';
 
-import Main from './containers/Main.js';
-import Index from './components/Index.js';
+import Main from './containers/Main';
+import Home from './containers/Home';
 
-ReactDOM.render(
-    <Router history={browserHistory}>
-        <Route path="/" component={Main}>
-            <IndexRoute component={Index}/>
-        </Route>
-    </Router>,
-    document.getElementById('app')
+const util = {
+	render: (component) => <Main>{component}</Main>
+};
+export default (
+
 );
 
 

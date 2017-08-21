@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class NewUser extends React.Component {
-    render() {
-        return (
-            <h1>New User</h1>
-        );
-    }
+export default class NewUser extends Component {
+	render() {
+		return (
+			<div className="new-user">
+				New User!
+			</div>
+		);
+	}
 }

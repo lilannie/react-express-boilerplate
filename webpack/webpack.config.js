@@ -2,9 +2,9 @@ const path = require('path'),
 	webpack = require('webpack'),
 	//HTMLWebpackPlugin = require('html-webpack-plugin'), // Useful when bundles file names change dynamically
 	paths = {
-	    entry: path.join(__dirname, '..', 'client', 'router.js'),
-	    build: path.join(__dirname, '..', 'public'),
-	    output: path.join(__dirname, '..', 'public', 'bundle.js')
+	    entry: path.join([__dirname, '..', 'client', 'index.js']),
+	    build: path.join([__dirname, '..', 'public']),
+	    output: path.join([__dirname, '..', 'public', 'bundle.js'])
 	};
 
 module.exports = {
