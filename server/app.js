@@ -1,5 +1,6 @@
-    const path = require('path'),
-  app = require('express')();
+const path = require('path'),
+  express = require('express'),
+  app = express();
 
 app.use(express.static(path.resolve('public')));
 app.set('view engine', 'html');

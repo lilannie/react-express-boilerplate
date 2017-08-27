@@ -6,11 +6,12 @@
   "license": "",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js -w",
+    "build": "./node_modules/.bin/webpack --config ./config/webpack.config.js -w",
     "server": "nodemon ./server/app.js",
-		"test": "jest --config jest.config.json"
+    "test": "jest --config ./config/jest.config.json"
   },
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.15.3",
     "react": "^15.4.2",
     "react-dom": "^15.3.2",
