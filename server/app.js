@@ -1,4 +1,4 @@
-const path = require('path'),
+    const path = require('path'),
   app = require('express')();
 
 app.use(express.static(path.resolve('public')));

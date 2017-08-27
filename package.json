@@ -7,28 +7,14 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js -w",
-    "server": "nodemon ./server/app.js"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "./test/index.js",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "**/*.js"
-    ],
-    "coveragePathIgnorePatterns": [
-      "./coverage/",
-      "./public/",
-      "./test/index.js"
-    ],
-    "coverageReporters": [
-      "lcov",
-      "text"
-    ]
+    "server": "nodemon ./server/app.js",
+		"test": "jest --config jest.config.json"
   },
   "dependencies": {
     "express": "^4.15.3",
     "react": "^15.4.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-redux": "^5.0.6"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
