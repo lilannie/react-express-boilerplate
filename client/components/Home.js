@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-export default class Home extends Component {
+import { dispatchToProps } from '../redux/selectors/home';
+
+class Home extends Component {
+	constructor(props) {
+		super(props);
+
+		console.dir(props);
+
+		const { dispatchSetVisibilityFilter } = this.props;
+		dispatchSetVisibilityFilter();
+
+	}
 	render() {
 		return (
 			<div className="home">
@@ -9,3 +22,7 @@ export default class Home extends Component {
 		);
 	}
 };
+
+
+
+export default connect(dispatchToProps)(Home);
