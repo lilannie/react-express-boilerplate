@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { dispatchToProps } from '../redux/selectors/home';
+import { mapDispatchToProps } from '../redux/selectors/home';
 
 class Home extends Component {
 	constructor(props) {
@@ -23,6 +23,8 @@ class Home extends Component {
 	}
 };
 
+Home.PropTypes = {
+	dispatchSetVisibilityFilter: PropTypes.func.isRequired
+};
 
-
-export default connect(dispatchToProps)(Home);
+export default connect(mapDispatchToProps)(Home);

@@ -1,9 +1,9 @@
 import { setVisibilityFilter, VisibilityFilters } from '../actions/example';
 
-export const dispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
 	return {
-		dispatchSetVisibilityFiler: () => {
-			dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL));
+		dispatchSetVisibilityFilter: () => {
+			return dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL));
 		}
 	};
 };
