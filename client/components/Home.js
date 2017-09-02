@@ -7,12 +7,11 @@ import { mapDispatchToProps } from '../redux/selectors/home';
 class Home extends Component {
 	constructor(props) {
 		super(props);
+	}
 
-		console.dir(props);
-
+	componentDidMount() {
 		const { dispatchSetVisibilityFilter } = this.props;
 		dispatchSetVisibilityFilter();
-
 	}
 	render() {
 		return (
@@ -27,4 +26,4 @@ Home.PropTypes = {
 	dispatchSetVisibilityFilter: PropTypes.func.isRequired
 };
 
-export default connect(mapDispatchToProps)(Home);
+export default connect(()=> ({}), mapDispatchToProps)(Home);
